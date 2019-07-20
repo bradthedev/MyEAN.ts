@@ -12,7 +12,7 @@ const accountRoute = new AccountRoute(),
 expressConfig();
 
 function expressConfig() {
-  app.use(loggerMiddleware);
+  //app.use(loggerMiddleware);
 
   //build other config here
   app.use(bodyParser.json());
@@ -22,11 +22,11 @@ function expressConfig() {
   app.use('/api/v1/account', accountRoute.router);
 
   app.listen(config.port, function () {
-    console.log('Example app listening at http://localhost:%s', config.port);
+    //console.log('Example app listening at http://localhost:%s', config.port);
   });
 }
 
-function loggerMiddleware(request: express.Request, response: express.Response, next) {
+/*function loggerMiddleware(request: express.Request, response: express.Response, next) {
   console.log(`${getTimestamp()} || ${request.method} ${request.path}`);
   next();
 }
@@ -34,4 +34,4 @@ function loggerMiddleware(request: express.Request, response: express.Response, 
 function getTimestamp() {
   var date = new Date();
   return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}:${date.getMilliseconds()}`;
-}
+}*/
