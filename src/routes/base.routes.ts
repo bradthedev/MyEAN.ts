@@ -8,14 +8,6 @@ export class BaseRoute{
     constructor(){
         this.router = express.Router();
 
-        this.router.get ('/*', function (req, res, next){
-            if (req.headers.host.match(/^www/) == null) {
-                res.redirect('https://www.' + req.headers.host + req.url);
-            } else {
-                next();
-            }
-        });
-
         this.router.get('/', (request, response) => {
             response.sendFile(config.pageMaintenance, {root: './'});            
         });
