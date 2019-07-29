@@ -1,4 +1,5 @@
 {
     "port": 29999,
-    "pageMaintenance": "src/html/site-maintenance.html"
+    "pageMaintenance": "src/html/site-maintenance.html",
+    "jwt_key": "ABCD1234"
 }
